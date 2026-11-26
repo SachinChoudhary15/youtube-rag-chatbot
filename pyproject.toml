@@ -1,0 +1,54 @@
+
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-video-chatbot"
+version = "0.1.0"
+description = "YouTube Video RAG Chatbot using Gemini"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "streamlit",
+    "pydantic-settings",
+    "python-dotenv",
+    "httpx",
+    "youtube-transcript-api",
+    "langchain-core",
+    "langchain-text-splitters",
+    "langchain-google-genai",
+    "langchain-qdrant",
+    "qdrant-client",
+    "sqlalchemy",
+    "psycopg[binary]",
+    "alembic",
+    "tenacity",
+    "langchain-huggingface",
+    "sentence-transformers",
+    "pwdlib[argon2]",
+    "PyJWT",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+    "ruff",
+]
+
+
+[tool.ruff]
+line-length = 100
+
+[tool.setuptools.packages.find]
+include = ["app*", "frontend*"]
+exclude = ["tests*"]
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+    "integration: tests requiring external services or real API calls",
+]

@@ -1,0 +1,64 @@
+
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Environment Variables and Secrets
+.env
+.env.*
+!.env.example
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Testing and Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Build Files
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Temporary Files
+*.tmp
+*.bak
+.cache/
+
+# Model and Data Artifacts
+artifacts/
+models/
+data/raw/
+data/processed/
+
+# Persistent Docker data
+/docker-data/
