@@ -1,0 +1,45 @@
+# Environment and secrets
+.env
+.env.*
+.streamlit/secrets.toml
+
+# Git
+.git
+.gitignore
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Local databases and logs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Local data and model caches
+data/
+artifacts/
+.cache/
+.huggingface/
+sentence_transformers/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Tests and documentation are not needed in the runtime image
+tests/
+README.md
